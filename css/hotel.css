@@ -1,0 +1,100 @@
+/*********************************************/
+/*                                           */
+/*          My crud project:                 */
+/*          MyDisneyCrud                     */ 
+/*          Lenguaje de Marcas               */
+/*          1º DAW - Curso 23/24             */
+/*       Autora: Sandra Barbara Pirpamer     */
+/*                                           */
+/*********************************************/                                         
+
+/* Basic styling */
+
+
+@font-face {  /*este no es un selector, es un enlace.*/
+    font-family: disneytitle;
+    src: url(../font/NewWaltDisneyFontRegular-BPen.ttf);
+} 
+caption {
+    font-family: disneytitle;
+    font-size: 3em;
+    letter-spacing: 2px; 
+    text-align: center;
+    padding: 10px;
+}
+.container{
+    overflow-x:auto;  /* create horizontal scroll bar when needed */
+        display: flex;  /* display flexible to allocate content */
+        justify-content: center; /* center horizontally content */
+        align-items: center;  /* vertically align content*/
+        height: 100vh;
+        margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 95%;
+    border: 1px solid goldenrod;
+}
+
+  /* header styling */
+th {
+    background-color: red;
+    text-align: left;
+    padding: 8px;
+    width: auto;
+}
+
+td {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    padding: 15px;
+    color: black;
+    width: auto;
+    
+}
+tr{
+    height:auto
+}
+
+tr:nth-child(odd){
+    background-color: goldenrod;
+    
+}
+
+.btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    font-weight: bold;
+    padding: 10px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    margin-right: 2px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 60px;
+  }
+
+.add{
+    
+    margin: auto;
+    bottom: 20px;
+}
+
+.success {background-color: #04AA6D;} /* Green */
+    .success:hover {background-color: #46a049;}
+    
+    .info {background-color: #2196F3;} /* Blue */
+    .info:hover {background: #0b7dda;}
+    
+    .warning {background-color: #ff9800;} /* Orange */
+    .warning:hover {background: #e68a00;}
+    
+    .danger {background-color: #f44336;} /* Red */
+    .danger:hover {background: #da190b;}
+    
+    .default {background-color: #e7e7e7; color: black;} /* Gray */
+    .default:hover {background: #ddd;}   
