@@ -10,8 +10,8 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-  height: 85vh;
+#container{
+  height: 90vh;
 }
 
 .mickey {
@@ -61,6 +61,7 @@ body{
     box-shadow: 3px 3px 2px 0 yellow;
     border-color: red;
     border-style: outset;
+  
 }
     .form .thumbnail {
     background: #EF3B3A;
