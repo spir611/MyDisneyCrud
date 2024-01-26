@@ -11,7 +11,7 @@ body{
     
     justify-content: center;  /* centrado horizontal */
     align-items: center; /* centrado vertical */
-    height: 100vh;
+    /* height: 100vh; */
   }
 
 #container{

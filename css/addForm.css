@@ -1,0 +1,109 @@
+/*podriamos usar grid or flexbox instead of margin-auto*/
+
+label span{color:#EF3B3A};
+
+
+@font-face {  
+    font-family: disneytitle;
+    src: url(../font/NewWaltDisneyFontRegular-BPen.ttf);
+} 
+
+#wrapper{
+    background-color: #EF3B3A;
+}
+
+
+h2{
+    background-color: white;
+    color: goldenrod;
+    height: 40px;
+    border: 1px solid goldenrod;
+    font-family: disneytitle;
+    font-size: 2em;
+    letter-spacing: 2px; 
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 3px 3px 5px goldenrod;
+}
+
+
+
+form{
+    width: 100%;
+    min-width: 500px;
+    max-width: 600px;  /* hace falta una media query para este estilo scroll */
+    margin:auto;   /* para centrar las cosas necesita un tañao*/
+    padding: 30px; /* no queda pegado al borde */
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px gold;
+    background-color: white;
+
+    /* border: 1px solid black; */  /* PARA VER LOS BORDES LUEGO SE QUITA */
+}
+
+/* form h2{
+    background-color: #EF3B3A;
+    color: goldenrod;
+    height: 50px;
+    border-radius: 10px;
+}
+/*  */
+ 
+form:hover{
+    box-shadow: 3px 3px 10px goldenrod;
+}
+
+input,select{
+    box-shadow: 1px 1px 2px goldenrod;
+    border: 2px solid goldenrod;
+    margin-bottom: 30px;
+    font-family: disneytitle;
+    color: black;
+    height: 20px;
+}
+
+text{
+    color: red;
+}
+
+label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    color: black;
+}
+
+#email{
+    width: 40%;
+}
+
+#city{
+    margin-right:20px;
+}
+
+#postal_code{
+    width: 15%;
+}
+
+
+
+input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="number"]) { /* me permite ref a un atributo *//*se puede invertir el selector
+    margin-bottom: 20px;  /* espacio entre los campos input */
+    width: 100%; /* width del campo del text en este caso */
+
+}
+
+.btn{
+    display: block;
+    background-color: goldenrod;
+    margin: auto;
+    height: 30px;
+    width: 60px;
+}
+
+
+
+/* input:not([type="text"]){ todos menos los atributo q estoy excluiendo
+
+} */
+

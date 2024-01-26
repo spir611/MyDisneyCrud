@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inserción</title>
+    <link rel="stylesheet" href="./insercion.css">
+
+</head>
+<body>
+    <form action="" method="post"><!-- uactio se usa para enviar los datos a un ejecutable del backen 
+    method es el metodo de envio, por defecto, post lo envio de forma oculta y-->
+    <!-- puede ir cualquier elemente imagenes inputs -->    
+        <h2>Inserción de datos</h2>
+        <fieldset><!--  -->
+            <legend>Datos personales</legend>    <!-- no hace falta -->
+            <!-- introduccion de nombre -->
+            <label for="">Nombre:<span>*</span></label>
+            <input type="text" id="nombre" name="nombre" placeholder="escribe tu nombre" required><br>  <!-- muy dificil de validar type text -->
+            <label for="">Apellidos:<span>*</span></label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="escribe tu nombre" required> <br> <!-- muy dificil de validar type text -->
+        </fieldset><br>
+        <!-- introduccion fechas -->
+        <label for="">Fecha Ingreso:</label>
+        <input type="date" id="fechaIn" name="fechaIn" required> <br> <!-- sale tipo calendario para no tener que validar entradas sueltas -->
+        <!-- introduccion emails -->
+        <label for="">Email:</label>
+        <input type="email" id="email" name="email" required> <br><!-- solo comprueba que hay@ y .com no vale como validacion de datos -->
+        
+        <!-- radio button se utiliza para elegir una entre varias opciones -->
+        <input type="radio" name="sexo" id="male" value="male"><label for="male">Hombre</label><br>
+        <input type="radio" name="sexo" id="female" value="female"><label for="female">Mujer</label><br>
+        <input type="radio" name="sexo" id="other" value="other"><label for="other">Otro</label><br>
+        
+        <!-- select -->
+        <label for="">Elige provincia:</label><br>   
+        <select name="provincia" id="provincia">
+            <option value="0">--elige opcion</option><!-- siempre es un valor erroneo -->
+            <option value="29">Málaga</option>
+            <option value="13">Granada</option>
+            <option value="4">Almeria</option>
+        </select>
+        <br>
+
+        <!-- text area -->
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea name="comment" id="omment" cols="30" rows="5"></textarea><br>
+
+        
+        <!-- casilla de verficacion -->
+        <input type="checkbox" name="terminos" id="terminos" required>
+        <label>Acepto los <a href="">términos...</a></label><br>
+
+        <!-- boton enviar, obligatorio -->
+        <!-- input type="reset">
+        <input type="submit" value="Enviar">   value lo q aparece en el boton -->
+        <button type="submit">Enviar</button>
+        
+    </form>
+</body>
+</html>

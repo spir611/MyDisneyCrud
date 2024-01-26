@@ -1,0 +1,36 @@
+/*podriamos usar grid or flexbox instead of margin-auto*/
+
+label span{color: red};
+
+form{
+    width: 60%;
+    min-width: 500px;
+    max-width: 600px;  /* hace falta una media query para este estilo scroll */
+    margin:auto;   /* para centrar las cosas necesita un tañao*/
+    padding: 20px; /* no queda pegado al borde */
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px grey;
+
+    /* border: 1px solid black; */  /* PARA VER LOS BORDES LUEGO SE QUITA */
+}
+
+form:hover{
+    box-shadow: 3px 3px 10px grey;
+}
+
+input, textarea, select{
+    margin-bottom: 20px;
+}
+
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]) { /* me permite ref a un atributo *//*se puede invertir el selector
+    margin-bottom: 20px;  /* espacio entre los campos input */
+    width: 100%; /* width del campo del text en este caso */
+    
+}
+
+
+
+/* input:not([type="text"]){ todos menos los atributo q estoy excluiendo
+
+} */
+
