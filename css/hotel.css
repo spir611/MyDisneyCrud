@@ -13,7 +13,7 @@
 
 @font-face {  
     font-family: disneytitle;
-    src: url(../font/NewWaltDisneyFontRegular-BPen.ttf);
+    src: url(./font/NewWaltDisneyFontRegular-BPen.ttf);
 } 
 
 h1 {

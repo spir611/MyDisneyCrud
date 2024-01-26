@@ -1,6 +1,6 @@
 @font-face {  /*este no es un selector, es un enlace.*/
     font-family: disneytitle;
-    src: url(../font/NewWaltDisneyFontRegular-BPen.ttf)
+    src: url(./font/NewWaltDisneyFontRegular-BPen.ttf)
 } 
 
 * {box-sizing: border-box;}
@@ -9,7 +9,7 @@
     background-color: red;
 }
 
-form{
+form {
     width: 98%;
     min-width: 370px;
     max-width: 600px;  /* hace falta una media query para este estilo scroll */
@@ -18,12 +18,11 @@ form{
     border-radius: 10px;
     box-shadow: 3px 3px 5px goldenrod;
     background-color: white;
-    
-    
 }
 label span{
     color: red
 }
+
 
 h1{
     background-color: white;
