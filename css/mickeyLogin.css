@@ -5,13 +5,19 @@
 
 * {box-sizing: border-box;}
 
-body{
+
+
+
+
+/*  @media only screen and (width>425px){*/
+  
+  body{
     background-color: #EF3B3A;
     font-family: Arial, Helvetica, sans-serif;
     
     justify-content: center;  /* centrado horizontal */
     align-items: center; /* centrado vertical */
-    /* height: 100vh; */
+    height: 100vh;
   }
 
 #container{
@@ -133,4 +139,138 @@ body{
     100%{transform: translateY(20px);
     }    
 }
-  
+/* }  */
+
+
+@media only screen and (max-width: 420px) {
+body{
+    background-color: #EF3B3A;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;  
+    align-items: center; 
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+  }
+
+
+#container{
+  width: 95%;
+  height: 90%;
+  margin: 5% 2.5%;
+  /*max-width: 450px;*/
+}
+
+/*Imagen de mickey*/
+.mickey {
+    position: relative;
+    z-index: 2;
+    height: 30%;
+    /*max-width: 100%;*/
+    min-width: 300px;
+    margin: 0 auto;
+    margin-bottom: -5%;
+    padding: 0px;
+    bottom: 0px;
+    text-align: center;
+    animation: mickeyAnim 2s ease 0s 1 normal forwards;     
+}
+.mickey img {
+    width: auto;
+    height: 100%;
+}
+
+/* Form */
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    height: 70vh;
+    width: 100%;
+    padding: 5%;
+    border-radius: 3px; 
+    text-align: center;
+    box-shadow: 3px 3px 2px 0 yellow;
+    border-color: red;
+    border-style: outset;
+}
+
+.logintitle {
+  color:red;
+  width: 100%;
+  font-family: disneytitle;
+  font-size: 2em;
+  font-weight: bold;
+  height: 80px;
+  margin: 5% auto;
+  padding: 1px 5px;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.logintitle h1 {
+  margin: 0;
+}
+
+
+    .form .thumbnail {
+    background: #EF3B3A;
+    width: 150px;
+    height: 150px;
+    margin: 5% auto;
+    padding: 35px 30px;
+    border-radius: 100%;
+    box-sizing: border-box;
+  }
+    .form .thumbnail img {
+    display: block;
+    width: 100%;
+    
+  }
+  .form input {
+    outline: 0;
+    background: #f4d407;
+    width: 90%;
+    border: 0;
+    margin: 5% 0 0;
+    padding: 5%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 2em;
+    color: black;
+  }
+  .form button {
+    outline: 0;
+    background: #EF3B3A;
+    width: 90%;
+    border: 0;
+    margin: 5% 0 0;
+    padding: 5%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: goldenrod;
+    font-family: disneytitle;
+    font-size: 4em;
+    font-weight: bold;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+
+  .form button:hover{
+    background-color: #f4d407;
+    color: red;
+  }
+
+  @keyframes mickeyAnim{ 
+    0% { transform: translateY(0);
+            
+        
+            }    
+    100%{transform: translateY(20px);
+    }    
+  }
+}
+
+
