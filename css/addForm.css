@@ -1,22 +1,34 @@
-/*podriamos usar grid or flexbox instead of margin-auto*/
-
-label span{color:#EF3B3A};
-
-
-@font-face {  
+@font-face {  /*este no es un selector, es un enlace.*/
     font-family: disneytitle;
-    src: url(../font/NewWaltDisneyFontRegular-BPen.ttf);
+    src: url(../font/NewWaltDisneyFontRegular-BPen.ttf)
 } 
 
-#wrapper{
-    background-color: #EF3B3A;
+* {box-sizing: border-box;}
+
+#wrapper {
+    background-color: red;
 }
 
+form{
+    width: 98%;
+    min-width: 370px;
+    max-width: 600px;  /* hace falta una media query para este estilo scroll */
+    margin:auto;   /* para centrar las cosas necesita un tañao*/
+    padding: 30px; /* no queda pegado al borde */
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px goldenrod;
+    background-color: white;
+    
+    
+}
+label span{
+    color: red
+}
 
-h2{
+h1{
     background-color: white;
     color: goldenrod;
-    height: 40px;
+    height: 15%;
     border: 1px solid goldenrod;
     font-family: disneytitle;
     font-size: 2em;
@@ -27,29 +39,10 @@ h2{
     box-shadow: 3px 3px 5px goldenrod;
 }
 
-
-
-form{
-    width: 100%;
-    min-width: 500px;
-    max-width: 600px;  /* hace falta una media query para este estilo scroll */
-    margin:auto;   /* para centrar las cosas necesita un tañao*/
-    padding: 30px; /* no queda pegado al borde */
-    border-radius: 10px;
-    box-shadow: 3px 3px 8px gold;
-    background-color: white;
-
-    /* border: 1px solid black; */  /* PARA VER LOS BORDES LUEGO SE QUITA */
+.form h1 {
+    font-family: disneytitle;
 }
 
-/* form h2{
-    background-color: #EF3B3A;
-    color: goldenrod;
-    height: 50px;
-    border-radius: 10px;
-}
-/*  */
- 
 form:hover{
     box-shadow: 3px 3px 10px goldenrod;
 }
@@ -58,23 +51,40 @@ input,select{
     box-shadow: 1px 1px 2px goldenrod;
     border: 2px solid goldenrod;
     margin-bottom: 30px;
-    font-family: disneytitle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+    background-color: white;
     color: black;
-    height: 20px;
+    height: 30px;
+    cursor: pointer;
+    
+
 }
 
-text{
-    color: red;
+input:hover,select:hover{
+    box-shadow: 1px 1px 2px red;
 }
+
+option{
+    color: black;
+}
+
+
+
+::placeholder{
+    color:lightgray;
+}
+
+
 
 label{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     color: black;
 }
 
 #email{
-    width: 40%;
+    width: 100%;
 }
 
 #city{
@@ -82,7 +92,15 @@ label{
 }
 
 #postal_code{
-    width: 15%;
+    width: 80px;
+}
+
+#code{
+    width: 50px;
+}
+
+#roomcap{
+    width: 70px;
 }
 
 
@@ -96,14 +114,24 @@ input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="numb
 .btn{
     display: block;
     background-color: goldenrod;
+    box-shadow: 1px 1px 2px goldenrod;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
     margin: auto;
     height: 30px;
-    width: 60px;
+    width: 80px;
+    font-family: disneytitle;
+    letter-spacing: 1px;
+}
+
+.btn:hover{
+    box-shadow: 3px 3px 4px goldenrod; 
+    background-color: red;
 }
 
 
 
-/* input:not([type="text"]){ todos menos los atributo q estoy excluiendo
 
-} */
 
