@@ -1,6 +1,6 @@
 @font-face {  /*este no es un selector, es un enlace.*/
     font-family: disneytitle;
-    src: url(./font/NewWaltDisneyFontRegular-BPen.ttf)
+    src: url(../font/NewWaltDisneyFontRegular-BPen.ttf)
 } 
 
 * {box-sizing: border-box;}
