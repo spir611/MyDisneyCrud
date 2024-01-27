@@ -136,6 +136,7 @@ input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="numb
 .btn{
     display: block;
     background-color: goldenrod;
+    color: red;
     box-shadow: 1px 1px 2px goldenrod;
     font-size: 1.5em;
     font-weight: bold;
@@ -151,6 +152,7 @@ input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="numb
 .btn:hover{
     box-shadow: 3px 3px 4px goldenrod; 
     background-color: red;
+    color: white;
 }
 
 
