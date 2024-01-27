@@ -170,8 +170,8 @@ body{
 
 
 #container{
+  height: 95%;
   width: 95%;
-  height: 90%;
   margin: 5% 2.5%;
   /*max-width: 450px;*/
 }
@@ -200,7 +200,7 @@ body{
     position: relative;
     z-index: 1;
     background: #FFFFFF;
-    height: 80%;
+    height: 90%;
     width: 100%;
     padding: 5%;
     border-radius: 3px; 
