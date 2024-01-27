@@ -102,6 +102,14 @@ label{
     width: 70px;
 }
 
+#parkoption, #cityoption, #countryoption, #staroption{
+    background-color: goldenrod;
+}
+
+#parkoption:hover{
+    background-color: red;
+    color: white;
+}
 
 
 input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="number"]) { /* me permite ref a un atributo *//*se puede invertir el selector
