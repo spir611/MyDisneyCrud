@@ -248,50 +248,49 @@ tr:nth-child(odd){
 
 
 /***media para movil horizontal****/
-@media only screen and (max-width: 850px) and (max-height: 500px) {
-    
+@media only screen and (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
+    /* Ajustar la altura de la tabla al 70% del contenedor */
     table {
-    height: 70%;
+        height: 70%;
     }
 
-    
+    /* Ajustar la altura de cada fila al 10% de la tabla */
     tr {
-    height: 10%;
+        height: 10%;
     }
 
-
+    /* Reducir el tamaño de fuente del encabezado */
     h1 {
         font-size: 1.2em;
     }
 
-    
+    /* Establecer un ancho mínimo para los nombres de los hoteles, los teléfonos y las direcciones */
     .hotelname, .telephone, .address {
         min-width: 150px;
     }
 
-    
+    /* Reducir el tamaño de fuente y el relleno de las celdas de la tabla */
     td {
         font-size: 1em;
         padding: 8px;
     }
 
-    
+    /* Reducir el relleno de los encabezados de la tabla */
     th {
         padding: 4px;
     }
 
-    
+    /* Reducir el tamaño de fuente, el relleno y el ancho de los botones */
     .btn {
         width: 40px;
         font-size: 0.7em;
         padding: 4px;
     }
 
-    
+    /* Reducir el tamaño de fuente, el relleno y el ancho del botón de añadir */
     .btnadd {
         font-size: 1.2em;
         padding: 8px;
         width: 70px;
     }
 }
-
