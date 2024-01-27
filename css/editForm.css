@@ -1,4 +1,16 @@
-@font-face {  /*este no es un selector, es un enlace.*/
+/******************************************************************************************************/
+/*                                                                                                    */
+/*                                  My Crud Project                                                   */
+/*                                    MyDisneyCrud                                                    */ 
+/*                                 Lenguaje de Marcas                                                 */
+/*                                   1º DAW -  23/24                                                  */
+/*                         Author: Sandra Barbara Pirpamer                                            */
+/*                                                                                                    */
+/******************************************************************************************************/                                         
+
+
+/********general styling*******/
+@font-face {  
     font-family: disneytitle;
     src: url(../font/NewWaltDisneyFontRegular-BPen.ttf)
 } 
@@ -9,16 +21,19 @@
     background-color: red;
 }
 
+
+/*********************form styling*****************************/
 form {
     width: 98%;
     min-width: 370px;
-    max-width: 600px;  /* hace falta una media query para este estilo scroll */
-    margin:auto;   /* para centrar las cosas necesita un tañao*/
-    padding: 30px; /* no queda pegado al borde */
+    max-width: 600px;  
+    margin:auto;   
+    padding: 30px; 
     border-radius: 10px;
     box-shadow: 3px 3px 5px goldenrod;
     background-color: white;
 }
+
 label span{
     color: red
 }
@@ -112,9 +127,8 @@ label{
 }
 
 
-input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="number"]) { /* me permite ref a un atributo *//*se puede invertir el selector
-    margin-bottom: 20px;  /* espacio entre los campos input */
-    width: 100%; /* width del campo del text en este caso */
+input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="number"]) { 
+    width: 100%; 
 
 }
 

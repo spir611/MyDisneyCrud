@@ -48,7 +48,7 @@ table {
     border: 1px solid goldenrod;
 }
 
-  /* header styling */
+  /******************header styling ************************/
 th {
     background-color: red;
     color: white;
@@ -57,14 +57,13 @@ th {
     height: 50px;
 }
 
-
+/*************************rowstying****************************/
 td {
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     padding: 15px;
     color: black;
-    /* width: fit-content; */
     height: 50px;
 }
 
@@ -82,6 +81,8 @@ tr:nth-child(odd){
     
 }
 
+
+/**********************edit and del button styling**********************/
 .btn {
     border: none;
     color: white; 
@@ -91,7 +92,9 @@ tr:nth-child(odd){
     border-radius: 5px;
     margin-bottom: 5px;
     width: 60px;
-  }
+}
+
+/*************************add button styling**************************/  
 
 .btnadd{
     display: flex;
@@ -108,18 +111,16 @@ tr:nth-child(odd){
     width: 80px;
     justify-content: center;
     
-     
-   
 }
 
 
 .btnadd:hover {background-color: #46a049;}
      
     
-.warning {background-color: #ff9800;} /* Orange */
+.warning {background-color: #ff9800;} 
 .warning:hover {background: #e68a00;}
     
-.danger {background-color: #f44336;} /* Red */
+.danger {background-color: #f44336;} 
 .danger:hover {background: #da190b;}
     
     

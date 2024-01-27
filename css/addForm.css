@@ -1,24 +1,40 @@
-@font-face {  /*este no es un selector, es un enlace.*/
+/******************************************************************************************************/
+/*                                                                                                    */
+/*                                  My Crud Project                                                   */
+/*                                    MyDisneyCrud                                                    */ 
+/*                                 Lenguaje de Marcas                                                 */
+/*                                   1º DAW -  23/24                                                  */
+/*                         Author: Sandra Barbara Pirpamer                                            */
+/*                                                                                                    */
+/******************************************************************************************************/                                         
+
+
+/*********general stying******/
+@font-face {  
     font-family: disneytitle;
     src: url(../font/NewWaltDisneyFontRegular-BPen.ttf)
 } 
 
 * {box-sizing: border-box;}
 
+
+/********body styling********/
 #wrapper {
     background-color: red;
 }
 
+/**********************form styling************************/
 form {
     width: 98%;
     min-width: 370px;
-    max-width: 600px;  /* hace falta una media query para este estilo scroll */
-    margin:auto;   /* para centrar las cosas necesita un tañao*/
-    padding: 30px; /* no queda pegado al borde */
+    max-width: 600px;  
+    margin:auto;   
+    padding: 30px; 
     border-radius: 10px;
     box-shadow: 3px 3px 5px goldenrod;
     background-color: white;
 }
+
 label span{
     color: red
 }
@@ -56,8 +72,6 @@ input,select{
     color: black;
     height: 30px;
     cursor: pointer;
-    
-
 }
 
 input:hover,select:hover{
@@ -67,7 +81,6 @@ input:hover,select:hover{
 option{
     color: black;
 }
-
 
 
 ::placeholder{
@@ -117,6 +130,8 @@ input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="numb
     width: 100%; /* width del campo del text en este caso */
 
 }
+
+/*******************send button styling***************************/
 
 .btn{
     display: block;
