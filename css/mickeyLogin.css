@@ -180,7 +180,7 @@ body{
 .mickey {
     position: relative;
     z-index: 2;
-    height: 30%;
+    height: 20%;  /* 30 */
     /*max-width: 100%;*/
     min-width: 300px;
     margin: 0 auto;
@@ -200,7 +200,7 @@ body{
     position: relative;
     z-index: 1;
     background: #FFFFFF;
-    height: 90%;
+    height: 85%;
     width: 100%;
     padding: 5%;
     border-radius: 3px; 
