@@ -5,59 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de inserción</title>
     <link rel="stylesheet" href="./css/addForm.css">
+    <link rel="shortcut icon" href="./img/faviconmickey.png" type="image/x-icon">
 
 </head>
 <body id="wrapper">
     <form action="" method="post">
 
-        <h1>Disney Hotel: Data Insertion </h1>
+        <h1>Disney Hotel: Edit Data  </h1>
             
         <label for="">Code:</label>
-        <input type="number" id="code" name="code" placeholder="" ><br>  
+        <input type="number" id="code" name="code" placeholder=""  value="1"><br>  
         <label for="">Name:<span>*</span></label>                                                                                                                                                                                                                   
-        <input type="text" id="name" name="name" placeholder="Hotel name..." required> <br> 
+        <input type="text" id="name" name="name" placeholder="Hotel name..." value="Disneyland Hotel" required> <br> <!-- muy dificil de validar type text -->
         
         
         <label for="">Address:<span>*</span></label>
-        <input type="text" id="address" name="name" placeholder="Hotel address..." required> <br>
-        <label for="">Select a City:<span>*</span></label>   
-        <select name="city" id="city" required>
-            <option id="cityoption" value="0">Choose an option</option>
-            <option value="29">Chessy</option>
+        <input type="text" id="address" name="name" placeholder="Hotel address.."
+        value="Rue de la Marniere" required> <br>
+        <label for="">Choose a City:<span>*</span></label>   
+        <select name="city" id="city" required value="Chessy">
+            <option id="cityoption" value="0">Chessy</option>
+            <option value="Chessy">Chessy</option>
             <option value="13">Coupway</option>
             <option value="4">Kissimmee</option>
         </select><br>
         
-        <label for="">Select a Country:<span>*</span>  </label>   
+        <label for="">Choose a Country:<span>*</span>  </label>   
         <select name="country" id="country" required>
-            <option id="countryoption"value="0">Choose an option</option>
+            <option id="countryoption"value="0">France</option>
             <option value="29">France</option>
             <option value="13">USA</option>
             <option value="4">Japan</option>
         </select>
         <br>
         <label for="">Postal Code:<span></span></label>
-        <input type="text" id="postal_code" name="postal_code" placeholder="Postal Code" > <br>
+        <input type="text" id="postal_code" name="postal_code" placeholder="Postal Code" value="77077"> <br>
     
         <label for="">Email: <span>*</span></label>
-        <input type="email" id="email" name="email" placeholder="Email address..." required> <br>
+        <input type="email" id="email" name="email" placeholder="Email address..." value="dlp.disneyhotel@gmail.com"required> <br>
         <label for="">Telephone # <span>*</span></label>:</label>
-        <input type="tel" id="telephone" name="telephone"  placeholder="telephone #..." required> <br>
+        <input type="tel" id="telephone" name="telephone"  placeholder="telephone #..."  value="(33)1-604-565-00"required> <br>
         
         <label for="">Room Capacity:</label>
-        <input type="number" id="roomcap" name="roomcap" placeholder="#..."> <br>
-        <label for="">Select # of Stars:</label>   
+        <input type="number" id="roomcap" name="roomcap" placeholder="#..." value="990"> <br>
+        <label for=""># of Stars:</label>   
         <select name="stars" id="stars">
-            <option id="staroption"value="0">Choose an option:</option>
+            <option id="staroption"value="0">5</option>
             <option value="29">1</option>
             <option value="13">2</option>
             <option value="4">3</option>
             <option value="6">4</option>
             <option value="7">5</option>
         </select><br>
-        <label for="">Select Disney Park:</label>     
+        <label for="">Disney Park:</label>     
         <select name="parks" id="parks">
-            <option id="parkoption" value="0">Choose an option</option>
+            <option id="parkoption"value="0">Disneyland Paris</option>
             <option value="29">Disneyland Paris</option>
             <option value="13">Disney World Orlando</option>
             <option value="4">Disney Resort Tokyo</option>
