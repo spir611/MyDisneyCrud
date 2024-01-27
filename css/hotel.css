@@ -152,4 +152,21 @@ tr:nth-child(odd){
 .danger {background-color: #f44336;} 
 .danger:hover {background: #da190b;}
     
+
+
+@media only screen and (max-width: 420px) {
+    /* ... */
+
+    table {
+      height: 80%; /* Ajustar la altura al 80% del contenedor */
+      /* ... */
+    }
+
+    tr {
+      height: 10%; /* Ajustar la altura al 10% de la tabla */
+      /* ... */
+    }
+
+    /* ... */
+}
     
