@@ -64,7 +64,7 @@
 
         <div>
             <label for="">Telephone # <span>*</span></label>:</label>
-            <input type="text" id="telephone" name="telephone"  value="33160456500" placeholder="telephone #..." onchange="resetear('telephone')"> <br>
+            <input type="text" id="telephone" name="telephone"  value="33160456500" placeholder="# only no spaces or symbols - *" onchange="resetear('telephone')"> <br>
             <div id="telephoneHelp" class="form-text">Valid telephone nº required</div>
         </div>
 
@@ -86,22 +86,23 @@
             <div id="parksHelp" class="form-text">Choose a valid Disney Park</div>
         </div>
 
-        <div id="radiobtn">
-            <label>Select # of Stars:</label><br>
-            <input  class="radbtn" type="radio" id="1" name="stars" value="1">
-            <label class="radbtn" for="1">1</label><br>
-            <input  class="radbtn" type="radio" id="2" name="stars" value="2">
-            <label for="2">2</label><br>
-            <input class="radbtn"   type="radio" id="3" name="stars" value="3">
-            <label class="radbtn" for="3">3</label><br>
-            <input class="radbtn" type="radio" id="4" name="stars" value="4">
-            <label class="radbtn" for="4">4</label><br>
-            <input class="radbtn" type="radio" id="5" name="stars" value="5" checked>
-            <label class="radbtn" for="5">5</label><br>
-            <div id="starsHelp" class="form-text">Please select a number from 1-5</div>
-        </div>
 
-        <!-- br><button class="btn" type="submit">Send</button><br> -->
+        <div id="radiobtn">
+            <label>Select # of Stars:</label>
+            <input  class="radbtn" type="radio" id="1" name="stars" value="1">
+            <label class="radbrn" for="1">1</label>
+            <input  class="radbtn" type="radio" id="2" name="stars" value="2">
+            <label for="2">2</label>
+            <input class="radbtn"   type="radio" id="3" name="stars" value="3">
+            <label class="radbtn" for="3">3</label>
+            <input class="radbtn" type="radio" id="4" name="stars" value="4">
+            <label class="radbtn" for="4">4</label>
+            <input class="radbtn" type="radio" id="5" name="stars" value="5" checked>
+            <label class="radbtn" for="5">5</label>
+        </div>
+            <div id="starsHelp" class="form-text">Please select a number from 1-5</div>
+       
+
         <input value="SEND" class="btn" type="submit">
     </form>
     <script src="./js/addeditForm.js"></script>

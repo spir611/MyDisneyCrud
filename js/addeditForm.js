@@ -16,30 +16,22 @@ const email = document.getElementById('email');
 const telephone = document.getElementById('telephone');
 const roomCap = document.getElementById('roomCap');
 const parks = document.getElementById('parks');
-const stars = document.getElementByName('stars');
 
-
+const radioGroup = document.getElementById('radiobtn');
+const radios = radioGroup.querySelectorAll('input[type="radio"]');
 
 const emailRegex =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,4}))$/; 
 
-//declaracion variables
 
-
-function validacion(event){
+function validacion(){
     let correcto = true;
     
-    event.preventDefault(); 
-
+    
     if(hotelName.value == "" || (/^\s+$/).test(hotelName.value)){
         document.getElementById('hotelNameHelp').style.visibility = "visible";
         hotelName.style.border="1px solid red";
         correcto = false;
     }
-   /*  if(hotelName.value == "" || !(/^\s+$/).test(hotelName.value)){
-        document.getElementById('hotelNameHelp').style.visibility = "visible" ;
-        hotelName.style.border="1px solid red"
-        correcto = false
-    } */
 
     if(address.value == "" || (/^\s+$/).test(address.value)){
         document.getElementById('addressHelp').style.visibility = "visible" ;
@@ -87,11 +79,7 @@ function validacion(event){
         correcto = false
     }
     
-    /* if(stars.value == "0"){
-        document.getElementById('starsHelp').style.visibility = "visible" ;
-        stars.style.border="1px solid red"
-        correcto = false
-    } */
+    
 
     if(parks.value == "0"){
         document.getElementById('parksHelp').style.visibility = "visible" ;
@@ -99,27 +87,30 @@ function validacion(event){
         correcto = false
     }
 
-    if(!isStarsSelected(stars)){
+    let selectedValue = isStarsSelected(radios);
+
+    if(selectedValue === undefined){
         document.getElementById('starsHelp').style.visibility = "visible" ;
         correcto = false
     }
 
-
-
-    
-
-    
 
     return correcto;
 
     
 }
 
+for (const radio of radios) {
+    radio.addEventListener('change', function() {
+        resetear('stars');
+    });
+}
+
 //Funciones
 
 function resetear(id) {
     document.getElementById(id + 'Help').style.visibility = "hidden";
-    document.getElementById(id).style.borderColor = "green"; // Corrected: borderColor and added unit
+    document.getElementById(id).style.borderColor = "green"; 
 }
 
 function validateEmail(email) {
@@ -127,17 +118,15 @@ function validateEmail(email) {
 }
 
 
-function isStarsSelected(stars){
-let isStarSelected = false;
-
-    for(let i = 0; i < stars.length; i++){
-        if(stars[i].checked){
-            isStarSelected = true;
-        
-        }
-       
+function isStarsSelected(radios){
+    let selectedValue;
+for (const radio of radios) {
+    if (radio.checked) {
+        selectedValue = radio.value;
+        break;
     }
-    return isStarSelected;
+}
+    return selectedValue;
 
 }    
 
