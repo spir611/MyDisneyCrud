@@ -9,13 +9,13 @@
 /*                                                                                                    */
 /*******************************************************************************************************/            
 //declaracion constantes
-const email = document.getElementById('email'); //getter
-const password = document.getElementById('password'); //getter
+const email = document.getElementById('email'); 
+const password = document.getElementById('password'); 
 
-const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //password
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/; // password
+const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/; 
 
-//declaracion variables
+
 
 
 function validacion(){
@@ -42,6 +42,11 @@ function validacion(){
         
     }
 
+    if (correcto) {
+        email.value = "";
+        password.value = "";
+    }
+
     return correcto;
 
     
@@ -51,7 +56,7 @@ function validacion(){
 
 function resetear(id) {
     document.getElementById(id + 'Help').style.visibility = "hidden";
-    document.getElementById(id).style.borderColor = "green"; // Corrected: borderColor and added unit
+    document.getElementById(id).style.borderColor = "green"; 
 }
 
 function validateEmail(email) {
