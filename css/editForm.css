@@ -7,9 +7,7 @@
 /*                         Author: Sandra Barbara Pirpamer                                            */
 /*                                                                                                    */
 /******************************************************************************************************/                                         
-
-
-/********general styling*******/
+/*********general stying******/
 @font-face {  
     font-family: disneytitle;
     src: url(../font/NewWaltDisneyFontRegular-BPen.ttf)
@@ -17,12 +15,13 @@
 
 * {box-sizing: border-box;}
 
+
+/********body styling********/
 #wrapper {
     background-color: red;
 }
 
-
-/*********************form styling*****************************/
+/**********************form styling************************/
 form {
     width: 98%;
     min-width: 370px;
@@ -61,21 +60,19 @@ form:hover{
     box-shadow: 3px 3px 10px goldenrod;
 }
 
-input,select{
+input,select:not([type="radio"]){
     box-shadow: 1px 1px 2px goldenrod;
     border: 2px solid goldenrod;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     font-family: Arial, Helvetica, sans-serif;
     font-size: .75em;
     background-color: white;
     color: black;
     height: 30px;
     cursor: pointer;
-    
-
 }
 
-input:hover,select:hover{
+input:hover,select:not([type="radio"]):hover{
     box-shadow: 1px 1px 2px red;
 }
 
@@ -83,6 +80,15 @@ option{
     color: black;
 }
 
+input[type="radio"] {
+    border: none;
+    box-shadow: none;
+    
+}
+
+label{
+    display: inline-block;
+}
 
 
 ::placeholder{
@@ -117,20 +123,48 @@ label{
     width: 70px;
 }
 
-#parkoption, #cityoption, #countryoption, #staroption{
+#parksoption, #cityoption, #countryoption, #starsoption{
     background-color: goldenrod;
 }
 
-#parkoption:hover{
+#parksoption:hover{
     background-color: red;
     color: white;
 }
 
 
-input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="number"]) { 
+input:not([type="submit"]):not([id="telephone"]):not([type="email"]):not([type="number"]):not([type="radio"]) { 
     width: 100%; 
-
 }
+
+.form-text{
+    visibility: hidden;
+    color: red;
+    margin-bottom: 30px;
+}
+
+input[type="radio"]:invalid {
+    outline: 1px solid red;
+}
+
+#radiobtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    margin-bottom: 30px;
+    
+}
+
+/* no permite cambiar el color del radio boton
+.radbtn:checked {
+    background-color: goldenrod;
+    color: goldenrod; 
+}*/
+
+
+
+/*******************send button styling***************************/
 
 .btn{
     display: block;

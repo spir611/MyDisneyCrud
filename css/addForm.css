@@ -62,10 +62,9 @@ form:hover{
     box-shadow: 3px 3px 10px goldenrod;
 }
 
-input,select{
+input,select:not([type="radio"]){
     box-shadow: 1px 1px 2px goldenrod;
     border: 2px solid goldenrod;
-    margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: .75em;
     background-color: white;
@@ -74,12 +73,22 @@ input,select{
     cursor: pointer;
 }
 
-input:hover,select:hover{
+input:hover,select:not([type="radio"]):hover{
     box-shadow: 1px 1px 2px red;
 }
 
 option{
     color: black;
+}
+
+input[type="radio"] {
+    border: none;
+    box-shadow: none;
+    
+}
+
+label{
+    display: inline-block;
 }
 
 
@@ -115,21 +124,45 @@ label{
     width: 70px;
 }
 
-#parkoption, #cityoption, #countryoption, #staroption{
+#parksoption, #cityoption, #countryoption, #starsoption{
     background-color: goldenrod;
 }
 
-#parkoption:hover{
+#parksoption:hover{
     background-color: red;
     color: white;
 }
 
 
-input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="number"]) { /* me permite ref a un atributo *//*se puede invertir el selector
-    margin-bottom: 20px;  /* espacio entre los campos input */
-    width: 100%; /* width del campo del text en este caso */
+input:not([type="submit"]):not([id="telephone"]):not([type="email"]):not([type="number"]):not([type="radio"]) { 
+    width: 100%; 
 
 }
+
+.form-text{
+    visibility: hidden;
+    color: red;
+    margin-bottom: 30px;
+}
+
+input[type="radio"]:invalid {
+    outline: 1px solid red;
+}
+
+#radiobtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    margin-bottom: 30px;
+    
+}
+
+/* no me permite cambiar el color del boton
+.radbtn:checked {
+    background-color: goldenrod;
+}
+ */
 
 /*******************send button styling***************************/
 
@@ -154,7 +187,6 @@ input:not([type="submit"]):not([type="tel"]):not([type="email"]):not([type="numb
     background-color: red;
     color: white;
 }
-
 
 
 

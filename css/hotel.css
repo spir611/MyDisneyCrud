@@ -46,7 +46,7 @@ h1 {
 }
 
 .container{
-        overflow-x:auto; 
+        overflow:auto; 
         display: flex;  
         flex-direction: column;
         justify-content: center; 

@@ -9,64 +9,116 @@
 
 </head>
 <body id="wrapper">
-    <form action="" method="post">
+    <form action="" method="post" onsubmit="return validacion(event)">
 
         <h1>Disney Hotel: Data Insertion </h1>
-            
-        <label for="">Code:</label>
-        <input type="number" id="code" name="code" placeholder="" ><br>  
-        <label for="">Name:<span>*</span></label>                                                                                                                                                                                                                   
-        <input type="text" id="name" name="name" placeholder="Hotel name..." required> <br> 
-        
-        
-        <label for="">Address:<span>*</span></label>
-        <input type="text" id="address" name="name" placeholder="Hotel address..." required> <br>
-        <label for="">Select a City:<span>*</span></label>   
-        <select name="city" id="city" required>
-            <option id="cityoption" value="0">Choose an option</option>
-            <option value="29">Chessy</option>
-            <option value="13">Coupway</option>
-            <option value="4">Kissimmee</option>
-        </select><br>
-        
-        <label for="">Select a Country:<span>*</span>  </label>   
-        <select name="country" id="country" required>
-            <option id="countryoption"value="0">Choose an option</option>
-            <option value="29">France</option>
-            <option value="13">USA</option>
-            <option value="4">Japan</option>
-        </select>
-        <br>
-        <label for="">Postal Code:<span></span></label>
-        <input type="text" id="postal_code" name="postal_code" placeholder="Postal Code" > <br>
-    
-        <label for="">Email: <span>*</span></label>
-        <input type="email" id="email" name="email" placeholder="Email address..." required> <br>
-        <label for="">Telephone # <span>*</span></label>:</label>
-        <input type="tel" id="telephone" name="telephone"  placeholder="telephone #..." required> <br>
-        
-        <label for="">Room Capacity:</label>
-        <input type="number" id="roomcap" name="roomcap" placeholder="#..."> <br>
-        <label for="">Select # of Stars:</label>   
-        <select name="stars" id="stars">
-            <option id="staroption"value="0">Choose an option:</option>
-            <option value="29">1</option>
-            <option value="13">2</option>
-            <option value="4">3</option>
-            <option value="6">4</option>
-            <option value="7">5</option>
-        </select><br>
-        <label for="">Select Disney Park:</label>     
-        <select name="parks" id="parks">
-            <option id="parkoption" value="0">Choose an option</option>
-            <option value="29">Disneyland Paris</option>
-            <option value="13">Disney World Orlando</option>
-            <option value="4">Disney Resort Tokyo</option>
-        </select><br>
-        <br>
+                                                                                            
+        <div>
 
-        <br><button class="btn" type="submit">Send</button><br>
+            <label for="">Name:<span>*</span></label>
+            <input type="text" id="hotelName" name="hotelName" placeholder="Hotel name..." onchange="resetear('hotelName')"> 
+            <div id="hotelNameHelp" class="form-text">Hotel name required</div>  
+        </div>
+
+        <div>
+            <label for="">Address:<span>*</span></label>
+            <input type="text" id="address" name="address" placeholder="Hotel address..." onchange="resetear('address')">
+            
+            <div id="addressHelp" class="form-text">Address required</div> 
+        </div>
         
+        <div>
+            <label for="">Select a City:<span>*</span></label>   
+            <select name="city" id="city" onchange="resetear('city')">
+                <option value="0" >Choose an option</option>
+                <option value="29">Chessy</option>
+                <option value="13">Coupway</option>
+                <option value="4">Kissimmee</option>
+            </select><br>
+            <div id="cityHelp" class="form-text">City required</div> 
+        </div>
+
+        <div>
+            <label for="">Select a Country:<span>*</span>  </label>   
+            <select name="country" id="country" onchange="resetear('country')">
+                <option value="0">Choose an option</option>
+                <option value="29">France</option>
+                <option value="13">USA</option>
+                <option value="4">Japan</option>
+            </select>
+            <br>
+            <div id="countryHelp" class="form-text">Country required</div>                                                                                                        
+        </div>
+
+        <div>
+            <label for="">Postal Code:<span></span></label>
+            <input type="text" id="postalCode" name="postalCode" placeholder="Postal Code" onchange="resetear('postalCode')"> <br>
+            <div id="postalCodeHelp" class="form-text">Postal Code required</div>  
+        </div>
+
+        <div>
+            <label for="">Email: <span>*</span></label>
+            <input type="email" id="email" name="email" placeholder="Email address..." onchange="resetear('email')"> <br>
+            <div id="emailHelp" class="form-text">Valid email required</div>
+        </div>
+
+        <div>
+            <label for="">Telephone # <span>*</span></label>:</label>
+            <input type="text" id="telephone" name="telephone"  placeholder="telephone #..." onchange="resetear('telephone')"> <br>
+            <div id="telephoneHelp" class="form-text">Valid telephone nº required</div>
+        </div>
+
+        <div>
+            <label for="">Room Capacity:</label>
+            <input type="number" id="roomCap" name="roomCap" placeholder="#..." onchange="resetear('roomCap')"> <br>
+            <div id="roomCapHelp" class="form-text">Room capacity required (no negative values permitted) </div>
+        </div>
+
+
+        <!-- <div>
+            <label for="">Select # of Stars:</label>   <br>
+            <select name="stars" id="stars" onchange="resetear('stars')" >
+                <option value="0" >Choose an option:</option>
+                <option value="29">1</option>
+                <option value="13">2</option>
+                <option value="4">3</option>
+                <option value="6">4</option>
+                <option value="7">5</option>
+            </select><br>
+            <div id="starsHelp" class="form-text">Introduce a number from 1-5</div>
+        </div> -->
+        <div>
+            <label for="">Select Disney Park:</label>     
+            <select name="parks" id="parks" onchange="resetear('parks')">
+                <option id="parksOption" value="0">Choose an option</option>
+                <option value="29">Disneyland Paris</option>
+                <option value="13">Disney World Orlando</option>
+                <option value="4">Disney Resort Tokyo</option>
+            </select>
+            
+            <div id="parksHelp" class="form-text">Choose a valid Disney Park</div>
+        </div>
+
+        <div id="radiobtn">
+            <label>Select # of Stars:</label><br>
+            <input  class="radbtn" type="radio" id="1" name="stars" value="1">
+            <label class="radbrn" for="1">1</label><br>
+            <input  class="radbtn" type="radio" id="2" name="stars" value="2">
+            <label for="2">2</label><br>
+            <input class="radbtn"   type="radio" id="3" name="stars" value="3">
+            <label class="radbtn" for="3">3</label><br>
+            <input class="radbtn" type="radio" id="4" name="stars" value="4">
+            <label class="radbtn" for="4">4</label><br>
+            <input class="radbtn" type="radio" id="5" name="stars" value="5">
+            <label class="radbtn" for="5">5</label><br>
+            <div id="starsHelp" class="form-text">Please select a number from 1-5</div>
+        </div>
+
+       
+
+        <!-- br><button class="btn" type="submit">Send</button><br> -->
+        <input value="SEND" class="btn" type="submit">
     </form>
+    <script src="./js/addeditForm.js"></script>
 </body>
 </html>

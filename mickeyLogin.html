@@ -17,15 +17,30 @@
                     <h1>Please Login</h1>
                 </div>
                 <div class="thumbnail"><img src="./img/key.png"/></div>
-                <form class="login-form">
-                    <input type="text" placeholder="username" required/>
-                    <input type="password" placeholder="password" required/>
-                    <button>login</button>
+                
+                <form action="" method="post" onsubmit="return validacion()"
+                    >
+                    <div>
+                        <label for="email" class="form-label"> </label>
+                        <input placeholder="User email*"  id="email" name="email" type="text" onchange="resetear('email')">
+                        <div id="emailHelp" class="form-text">Valid user email required</div>
+                    </div>
+                    <!-- <label for="password" class="form-label">Password</label> -->
+                    <div>
+                        <label for="password" class="form-label"> </label>
+                        <input placeholder="Password*" id="password" name="password" type="password" onchange="resetear('password')">
+                        <div id="passwordHelp" class="form-text">Valid password required (8-15 char/incl. cap & small letters/min. 1 nº/min. 1 symbol)</div>
+                    </div>
+
+
+                    <!-- <input type="text" placeholder="username" required/> -->
+                    <!-- <input type="password" placeholder="password" required/> -->
+                    <input value="LOGIN" class="btn-login" type="submit">
     
                 </form>
             </div>
         </div>    
 
-
+        <script src="./js/mickeyLogin.js"></script>
     </body>
 </html>
