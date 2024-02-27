@@ -294,7 +294,7 @@ body{
     color: goldenrod;
     font-family: disneytitle;
     letter-spacing: 2px;
-    font-size: 4em;
+    font-size: 2em;
     font-weight: bold;
     transition: all 0.3 ease;
     cursor: pointer;
@@ -302,7 +302,7 @@ body{
 
   .form-text{
     color: red;
-    display: none;
+    visibility: hidden;
   }
 
   .form .btn-login:hover{
