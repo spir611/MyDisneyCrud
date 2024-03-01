@@ -27,6 +27,7 @@
 </ul>
 
 <h3>Mickey Login form (mickeylogin.html)</h3>
+<img src="readme image/mickeyloginimage.png">
 <p>I used a red background with goldenrod detailing to imitate the official Disney colour palette. The form background is white to facilate reading. Mickey Mouse, as the chief Disney Mascot, sits upon the form and is slightly animated to move from the superior edge to the form. It follows a flat design to enhance simplicity. A thumbnail key image is used to connect the form to the purpose of the CRUD, Hotels, although the key has a double meaning as the purpose of the form is to authenticate the user with his/her email and password.
 </p>
 <p></p>
