@@ -13,7 +13,8 @@ const email = document.getElementById('email');
 const password = document.getElementById('password'); 
 
 const emailRegex =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,4}))$/;
-const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/; 
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
+; 
 
 
 
@@ -34,7 +35,7 @@ function validacion(){
 
     
 
-    if (password.value == "" || (!validatePassword(password.value) && !(password.length>=8 && password.length<=15))) {
+    if (password.value == "" || (!validatePassword(password.value))) {
 
         document.getElementById('passwordHelp').style.visibility="visible";
         password.style.border="1px solid red";
