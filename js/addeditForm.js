@@ -128,8 +128,17 @@ for (const radio of radios) {
 }
     return selectedValue;
 
-}    
+}  
 
+function myFunction() {
+    confirm("Are you sure you want to delete this register?\nTo confirm press either Aceptar or Cancelar.");
+
+}
+
+function confirmChanges() {
+    confirm("Are you sure this information is correct and you want to send this register? (all fields must be filled in correctly to submit)");
+
+}
 
 
 
